@@ -1,7 +1,15 @@
 const Discord = require('discord.js');
+const fs = require("fs");
+
+fs.readFile('token.txt', function (err, data) {
+      if (err) {
+         return console.error(err);
+      }
+      var token = data.toString();
+   });
 
 const client = new Discord.Client();
-client.login("Nzk5MzM1NTk0OTU3NDcxNzYy.YACFSA.5WdNcCV-1CqoyOtRnuo3mFt3lHs");
+client.login(token);
 
 client.on('ready', async () => {
     console.log(`Logged in successfully as bot!`);
