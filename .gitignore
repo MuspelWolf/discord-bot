@@ -105,4 +105,7 @@ dist
 © 2021 GitHub, Inc.
 
 #token
-.token
+dist
+dist/src
+dist/src/*
+dist/**/*
